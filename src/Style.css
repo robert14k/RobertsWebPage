@@ -1,0 +1,71 @@
+.main-header {
+    background-image: url(./images/mountain-names.jpg);
+    background-repeat: "no-repeat";
+    background-position: "center";
+    background-size: "cover";
+    width: "100%";
+    height: "100%";
+}
+.welcomeFont{
+    font-family: Verdana, Geneva, sans-serif;
+font-size: 38px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #2b3538;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+.headerFont{
+    font-family: Verdana, Geneva, sans-serif;
+font-size: 45px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #2b3538a6;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.bodyHeaderFont{
+    font-family: Verdana, Geneva, sans-serif;
+font-size: 20px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #2b3538;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+.bodyTextFont{
+    font-family: Verdana, Geneva, sans-serif;
+font-size: 18px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #2b3538;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.subHeaderFont{
+    font-family: Verdana, Geneva, sans-serif;
+font-size: 30px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #04c4ff;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
