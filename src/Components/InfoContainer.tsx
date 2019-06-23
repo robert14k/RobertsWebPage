@@ -1,23 +1,29 @@
 import React, { Component } from "react";
 import Headshot from "../images/Fall_2018_headshot.jpg";
-import { Row, Card, Avatar, Icon } from "antd";
+import { Row, Card, Avatar, Icon, Col, Divider } from "antd";
+// import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "../Style.css";
+import webPage from "../images/webPage.png";
+import Project156 from "../images/156Project.png"
+const { Meta } = Card;
 export interface IInfoContainerProps {
-  //none
+  mobile: boolean;
 }
 
 export interface IInfoContainerState {
   //none
 }
 
-export default class AddComment extends Component<
+export default class InfoContainer extends Component<
   IInfoContainerProps,
   IInfoContainerState
 > {
   static defaultProps = {};
 
   state: IInfoContainerState = {};
-
+  openPdf = () => {
+    window.open();
+  };
   render() {
     return (
       <>
@@ -37,7 +43,15 @@ export default class AddComment extends Component<
               className="bodyHeaderFont"
               style={{ height: "40px", textAlign: "left" }}
             >
-              <Icon style={{height: "20px", width: "20px", color:"#2b3538", margin: "5px"}} type="user" />
+              <Icon
+                style={{
+                  height: "20px",
+                  width: "20px",
+                  color: "#2b3538",
+                  margin: "5px"
+                }}
+                type="user"
+              />
               About Me:
             </Row>
             <Row>
@@ -56,18 +70,90 @@ export default class AddComment extends Component<
             </Row>
             {/* <Row>
               <Col span={12}>
-                <a href="..\files\Resume.pdf">
-                  hello
-                </a>
+                <a onClick={this.openPdf}>hello</a>
               </Col>
-              <Col span={12}>
-              </Col>
+              <Col span={12} />
             </Row> */}
-            
+            <Row
+              className="bodyHeaderFont"
+              style={{ height: "40px", textAlign: "left" }}
+            >
+              Projects:
+            </Row>
+            <Row>
+              {!this.props.mobile && (
+                <>
+                  <Col span={10}>
+                    <a href={"https://github.com/robert14k/RobertWebPage"} style={{margin: "20px"}}>
+                      <Card
+                        style={{
+                          height: "auto",
+                          backgroundColor: "#FFFFFF",
+                          borderColor: "#ECECEC",
+                          alignContent: "center",
+                          maxWidth: "300"
+                        }}
+                        hoverable
+                        cover={<img alt="example" src={webPage} />}
+                      >
+                        <Divider />
+                        <Meta className="bodyTextFont"
+                          title="This Website"
+                          description="This was my first website created using react and typescript."
+                        />
+                      </Card>
+                    </a>
+                  </Col>
+                  <Col span={4}/>
+                  <Col span={10}>
+                    <a href={"https://github.com/robert14k/156Project5.1"} style={{margin: "20px"}}>
+                      <Card
+                        style={{
+                          height: "auto",
+                          backgroundColor: "#FFFFFF",
+                          borderColor: "#ECECEC",
+                          alignContent: "center",
+                          maxWidth: "300",
+                          
+                        }}
+                        hoverable
+                        cover={<img alt="example" src={Project156} />}
+                      >
+                        <Divider />
+                        <Meta className="bodyTextFont"
+                          title="Invoice Tracker"
+                          description="This is a backend application written in Java and SQL to track invoices for a movie theater "
+                        />
+                      </Card>
+                    </a>
+                  </Col>
+                </>
+              )}
+              {this.props.mobile && (
+                <>
+                  <Card
+                    style={{
+                      height: "auto",
+                      backgroundColor: "#FFFFFF",
+                      borderColor: "#ECECEC",
+                      alignContent: "center",
+                      maxWidth: "300",
+                      margin: "20px"
+                    }}
+                    hoverable
+                    cover={<img alt="example" src={webPage} />}
+                  >
+                    <Divider />
+                    <Meta className="bodyTextFont"
+                      title="This Website"
+                      description="This was my first website created using react and typescript."
+                    />
+                  </Card>
+                </>
+              )}
+            </Row>
           </Card>
-          <Row className="footerFont">
-            Created By: Robert Kirkpatrick
-          </Row>
+          <Row className="footerFont">Created By: Robert Kirkpatrick</Row>
         </div>
       </>
     );

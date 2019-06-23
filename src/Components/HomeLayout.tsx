@@ -73,12 +73,12 @@ export class HomeLayout extends Component<IHomeLayoutProps, IHomeLayoutState> {
               <Col span={4}></Col>
               <Col span={16}>
                 {/* this is where i want to render my info page, maybe make that a component */}
-                <InfoContainer />
+                <InfoContainer mobile={this.state.mobile}/>
               </Col>
               <Col span={4}></Col>
             </>
           )}
-          {this.state.mobile && <InfoContainer />}
+          {this.state.mobile && <InfoContainer mobile={this.state.mobile}/>}
         </Row>
       </div>
     );
