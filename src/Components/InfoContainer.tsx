@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Headshot from "../images/Fall_2018_headshot.jpg";
-import { Row, Card, Avatar, Icon, Col } from "antd";
+import { Row, Card, Avatar, Icon } from "antd";
 import "../Style.css";
 export interface IInfoContainerProps {
   //none
@@ -65,6 +65,9 @@ export default class AddComment extends Component<
             </Row> */}
             
           </Card>
+          <Row className="footerFont">
+            Created By: Robert Kirkpatrick
+          </Row>
         </div>
       </>
     );
