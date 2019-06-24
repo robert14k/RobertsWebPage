@@ -83,3 +83,6 @@ text-transform: none;
 margin: 10px;
 }
 
+.is-momentumScrollable {
+    -webkit-overflow-scrolling: touch;
+ }

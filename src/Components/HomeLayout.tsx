@@ -30,7 +30,8 @@ export class HomeLayout extends Component<IHomeLayoutProps, IHomeLayoutState> {
     backgroundSize: "cover",
     width: "100%",
     height: "100vh",
-    overflow: "scroll" //this makes it able to scroll the innder component but the backgroudn remains fixed!!!
+    overflow: "scroll", //this makes it able to scroll the innder component but the backgroudn remains fixed!!!
+    overflowy: "scroll", /* has to be scroll, not auto */
   };
 
   updateDimensions() {

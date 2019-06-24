@@ -4,7 +4,7 @@ import { Row, Card, Avatar, Icon, Col, Divider } from "antd";
 // import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "../Style.css";
 import webPage from "../images/webPage.png";
-import Project156 from "../images/156Project.png"
+import Project156 from "../images/156Project.png";
 const { Meta } = Card;
 export interface IInfoContainerProps {
   mobile: boolean;
@@ -84,7 +84,10 @@ export default class InfoContainer extends Component<
               {!this.props.mobile && (
                 <>
                   <Col span={10}>
-                    <a href={"https://github.com/robert14k/RobertWebPage"} style={{margin: "20px"}}>
+                    <a
+                      href={"https://github.com/robert14k/RobertWebPage"}
+                      style={{ margin: "20px" }}
+                    >
                       <Card
                         style={{
                           height: "auto",
@@ -97,30 +100,34 @@ export default class InfoContainer extends Component<
                         cover={<img alt="example" src={webPage} />}
                       >
                         <Divider />
-                        <Meta className="bodyTextFont"
+                        <Meta
+                          className="bodyTextFont"
                           title="This Website"
                           description="This was my first website created using react and typescript."
                         />
                       </Card>
                     </a>
                   </Col>
-                  <Col span={4}/>
+                  <Col span={4} />
                   <Col span={10}>
-                    <a href={"https://github.com/robert14k/156Project5.1"} style={{margin: "20px"}}>
+                    <a
+                      href={"https://github.com/robert14k/156Project5.1"}
+                      style={{ margin: "20px" }}
+                    >
                       <Card
                         style={{
                           height: "auto",
                           backgroundColor: "#FFFFFF",
                           borderColor: "#ECECEC",
                           alignContent: "center",
-                          maxWidth: "300",
-                          
+                          maxWidth: "300"
                         }}
                         hoverable
                         cover={<img alt="example" src={Project156} />}
                       >
                         <Divider />
-                        <Meta className="bodyTextFont"
+                        <Meta
+                          className="bodyTextFont"
                           title="Invoice Tracker"
                           description="This is a backend application written in Java and SQL to track invoices for a movie theater "
                         />
@@ -131,24 +138,30 @@ export default class InfoContainer extends Component<
               )}
               {this.props.mobile && (
                 <>
-                  <Card
-                    style={{
-                      height: "auto",
-                      backgroundColor: "#FFFFFF",
-                      borderColor: "#ECECEC",
-                      alignContent: "center",
-                      maxWidth: "300",
-                      margin: "20px"
-                    }}
-                    hoverable
-                    cover={<img alt="example" src={webPage} />}
+                  <a
+                    href={"https://github.com/robert14k/RobertWebPage"}
+                    style={{ margin: "20px" }}
                   >
-                    <Divider />
-                    <Meta className="bodyTextFont"
-                      title="This Website"
-                      description="This was my first website created using react and typescript."
-                    />
-                  </Card>
+                    <Card
+                      style={{
+                        height: "auto",
+                        backgroundColor: "#FFFFFF",
+                        borderColor: "#ECECEC",
+                        alignContent: "center",
+                        maxWidth: "300",
+                        margin: "20px"
+                      }}
+                      hoverable
+                      cover={<img alt="example" src={webPage} />}
+                    >
+                      <Divider />
+                      <Meta
+                        className="bodyTextFont"
+                        title="This Website"
+                        description="This was my first website created using react and typescript."
+                      />
+                    </Card>
+                  </a>
                 </>
               )}
             </Row>
