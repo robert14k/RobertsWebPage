@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Headshot from "../images/Fall_2018_headshot.jpg";
-import { Row, Card, Avatar, Icon, Col, Divider } from "antd";
+import { Row, Card, Avatar, Icon } from "antd";
 // import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "../Style.css";
 import webPage from "../images/webPage.png";
-import Project156 from "../images/156Project.png";
-const { Meta } = Card;
+import ProjectEntity from "../Modals/ProjectEntity";
+import Project from "./Project";
 export interface IInfoContainerProps {
   mobile: boolean;
 }
@@ -13,17 +13,35 @@ export interface IInfoContainerProps {
 export interface IInfoContainerState {
   //none
 }
+let projects: ProjectEntity[] = [];
+let project1 = new ProjectEntity({
+  picture: webPage,
+  title: "Invoice Tracker",
+  description: "This was my first website created using react and typescript.",
+  link: "https://github.com/robert14k/RobertWebPage",
+  isLeft: true,
+});
+let project2 = new ProjectEntity({
+  picture: webPage,
+  title: "Invoice Tracker",
+  description: "This was my first website created using react and typescript.",
+  link: "https://github.com/robert14k/RobertWebPage",
+  isLeft: true,
+});
+projects[0] = project1;
+projects[1] = project2;
 
 export default class InfoContainer extends Component<
   IInfoContainerProps,
   IInfoContainerState
 > {
   static defaultProps = {};
-
   state: IInfoContainerState = {};
   openPdf = () => {
     window.open();
   };
+  
+  
   render() {
     return (
       <>
@@ -70,7 +88,11 @@ export default class InfoContainer extends Component<
             </Row>
             {/* <Row>
               <Col span={12}>
-                <a onClick={this.openPdf}>hello</a>
+                <a href={}>Resume.WOrd</a>
+              </Col>
+              <Col span={12} />
+              <Col span={12}>
+                <a href={}>Resume.html</a>
               </Col>
               <Col span={12} />
             </Row> */}
@@ -81,89 +103,7 @@ export default class InfoContainer extends Component<
               Projects:
             </Row>
             <Row>
-              {!this.props.mobile && (
-                <>
-                  <Col span={10}>
-                    <a
-                      href={"https://github.com/robert14k/RobertWebPage"}
-                      style={{ margin: "20px" }}
-                    >
-                      <Card
-                        style={{
-                          height: "auto",
-                          backgroundColor: "#FFFFFF",
-                          borderColor: "#ECECEC",
-                          alignContent: "center",
-                          maxWidth: "300"
-                        }}
-                        hoverable
-                        cover={<img alt="example" src={webPage} />}
-                      >
-                        <Divider />
-                        <Meta
-                          className="bodyTextFont"
-                          title="This Website"
-                          description="This was my first website created using react and typescript."
-                        />
-                      </Card>
-                    </a>
-                  </Col>
-                  <Col span={4} />
-                  <Col span={10}>
-                    <a
-                      href={"https://github.com/robert14k/156Project5.1"}
-                      style={{ margin: "20px" }}
-                    >
-                      <Card
-                        style={{
-                          height: "auto",
-                          backgroundColor: "#FFFFFF",
-                          borderColor: "#ECECEC",
-                          alignContent: "center",
-                          maxWidth: "300"
-                        }}
-                        hoverable
-                        cover={<img alt="example" src={Project156} />}
-                      >
-                        <Divider />
-                        <Meta
-                          className="bodyTextFont"
-                          title="Invoice Tracker"
-                          description="This is a backend application written in Java and SQL to track invoices for a movie theater "
-                        />
-                      </Card>
-                    </a>
-                  </Col>
-                </>
-              )}
-              {this.props.mobile && (
-                <>
-                  <a
-                    href={"https://github.com/robert14k/RobertWebPage"}
-                    style={{ margin: "20px" }}
-                  >
-                    <Card
-                      style={{
-                        height: "auto",
-                        backgroundColor: "#FFFFFF",
-                        borderColor: "#ECECEC",
-                        alignContent: "center",
-                        maxWidth: "300",
-                        margin: "20px"
-                      }}
-                      hoverable
-                      cover={<img alt="example" src={webPage} />}
-                    >
-                      <Divider />
-                      <Meta
-                        className="bodyTextFont"
-                        title="This Website"
-                        description="This was my first website created using react and typescript."
-                      />
-                    </Card>
-                  </a>
-                </>
-              )}
+              <Project isMobile={this.props.mobile} projects={projects}/>
             </Row>
           </Card>
           <Row className="footerFont">Created By: Robert Kirkpatrick</Row>
