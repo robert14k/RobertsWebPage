@@ -32,7 +32,7 @@ export default class Project extends Component<IProjectProps, IProjectState> {
               hoverable
               cover={
                 <img
-                  style={{ height: "350px" }}
+                  style={{ width: "100%" }}
                   alt="example"
                   src={entity.picture}
                 />
@@ -62,15 +62,15 @@ export default class Project extends Component<IProjectProps, IProjectState> {
                 }}
                 hoverable
               >
-                <Row>
-                  <Col span={4}>
+                <Row gutter={8}>
+                  <Col xxl={8} xl={10} lg={12} md={13}>
                     <img
-                      style={{ height: "350px" }}
+                      style={{ width : "100%" }}
                       alt="example"
                       src={entity.picture}
-                    />
+                    /> 
                   </Col>
-                  <Col span={20}>
+                  <Col xxl={16} xl={14} lg={12} md={11}>
                     <Row className="cardHeader">{entity.title}</Row>
                     <Divider />
                     <Row className="cardBody">{entity.description}</Row>
@@ -93,15 +93,15 @@ export default class Project extends Component<IProjectProps, IProjectState> {
                 }}
                 hoverable
               >
-                <Row>
-                  <Col span={20}>
+                <Row gutter={8}>
+                  <Col xxl={16} xl={14} lg={12} md={11}>
                     <Row className="cardHeader">{entity.title}</Row>
                     <Divider />
                     <Row className="cardBody">{entity.description}</Row>
                   </Col>
-                  <Col span={4}>
+                  <Col xxl={8} xl={10} lg={12} md={13}>
                     <img
-                      style={{ height: "350px" }}
+                      style={{ width: "100%" }}
                       alt="example"
                       src={entity.picture}
                     />

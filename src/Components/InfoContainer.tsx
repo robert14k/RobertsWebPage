@@ -4,6 +4,7 @@ import { Row, Card, Avatar, Icon } from "antd";
 // import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import "../Style.css";
 import webPage from "../images/webPage.png";
+import project156 from "../images/project156.png";
 import ProjectEntity from "../Modals/ProjectEntity";
 import Project from "./Project";
 export interface IInfoContainerProps {
@@ -16,17 +17,17 @@ export interface IInfoContainerState {
 let projects: ProjectEntity[] = [];
 let project1 = new ProjectEntity({
   picture: webPage,
-  title: "Invoice Tracker",
-  description: "This was my first website created using react and typescript.",
+  title: "This web site",
+  description: "This is my first website created using react and typescript. I decided to create this as a way to learn how to build, deploy, and host a website.",
   link: "https://github.com/robert14k/RobertWebPage",
   isLeft: true,
 });
 let project2 = new ProjectEntity({
-  picture: webPage,
+  picture: project156,
   title: "Invoice Tracker",
-  description: "This was my first website created using react and typescript.",
-  link: "https://github.com/robert14k/RobertWebPage",
-  isLeft: true,
+  description: "This is a backend application written in Java and SQL to track invoices for a movie theater.",
+  link: "https://github.com/robert14k/156Project5.1",
+  isLeft: false,
 });
 projects[0] = project1;
 projects[1] = project2;

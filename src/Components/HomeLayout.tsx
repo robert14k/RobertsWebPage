@@ -34,7 +34,7 @@ export class HomeLayout extends Component<IHomeLayoutProps, IHomeLayoutState> {
   };
 
   updateDimensions() {
-    if (window.innerWidth < 700) {
+    if (window.innerWidth < 900) {
       this.setState({
         mobile: true
       });
