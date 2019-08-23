@@ -3,13 +3,11 @@ import React, { Component } from "react";
 import "../Style.css";
 import Background from "../images/mountain-names.jpg";
 //import Lake from '../images/mountainLake.jpg';
-import { Row, Col, Anchor } from "antd";
+import { Row, Col } from "antd";
 import InfoContainer from "./InfoContainer";
 import animateScrollTo from 'animated-scroll-to';
 //import { Grid, Row, Col } from 'react-flexbox-grid';
 
-//  const { Row } = Grid;
-const { Link } = Anchor;
 
 export interface IHomeLayoutProps {
   //none
