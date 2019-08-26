@@ -2,7 +2,7 @@
 import React from 'react';
 import "./App.css";
 import 'antd/dist/antd.css';
-import { HomeLayout } from './Components/HomeLayout';
+import { LandingPage } from './Components/LandingPage';
 
 
 const App: React.FC = () => {
