@@ -2,13 +2,13 @@
 import React from 'react';
 import "./App.css";
 import 'antd/dist/antd.css';
-import { LandingPage } from './Components/LandingPage';
+import { LandingRoutes } from './Components/LandingRoutes';
 
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <HomeLayout/>
+      <LandingRoutes/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

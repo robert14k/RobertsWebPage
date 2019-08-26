@@ -1,21 +1,24 @@
 import React, { Component } from "react";
 import "../Style.css";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-export interface ILandingPageProps {
+import { LandingPage } from "./LandingPage"
+import { HomeLayout } from "./HomeLayout";
+
+export interface ILandingRoutesProps {
   //none
 }
 
-export interface ILandingPageState {
+export interface ILandingRoutesState {
   //none
 }
 
-export class LandingPage extends Component<
-  ILandingPageProps,
-  ILandingPageState
+export class LandingRoutes extends Component<
+  ILandingRoutesProps,
+  ILandingRoutesState
 > {
   static defaultProps = {};
-  state: ILandingPageState = {
+  state: ILandingRoutesState = {
     mobile: false
   };
   //i want to have a array of background immagaes that randomly assign to the background so it wont always be the same immage, thatd be cool...
@@ -54,7 +57,12 @@ export class LandingPage extends Component<
   mobile: boolean = false;
   render() {
     return (
-        <div style={this.sectionStyle}>
+      <Router>
+        <Route path ="/" exact component={LandingPage} />
+        <Route path="/Robert" component={HomeLayout} />
+        {/* <Route path="/Ted" component={null} />
+        <Route path="/Spotify" component={null}/> */}
+        {/* <div style={this.sectionStyle}>
           <Link to="/Robert">
             Robert 
           </Link>
@@ -64,7 +72,11 @@ export class LandingPage extends Component<
           <Link to="/Spotify">
             Spotify Application 
           </Link>
-        </div>
+        </div> */}
+        {/* <Route path="/Robert" component={HomeLayout} /> */}
+        {/* <Route path="/Ted" component={null} />
+        <Route path="/Spotify" component={null}/> */}
+      </Router>
     );
   }
 }
