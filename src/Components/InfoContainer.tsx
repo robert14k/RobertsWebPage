@@ -108,13 +108,15 @@ export default class InfoContainer extends Component<
             <Row>
               <Project isMobile={this.props.mobile} projects={projects} />
             </Row>
-            <Divider/>
+            <Divider />
             <Row
               className="bodyHeaderFont"
               style={{ height: "40px", textAlign: "center" }}
             >
               <Col span={8}>
-                <a href={"/Resume.pdf"} style={{color: "#2b3538"}}>Resume</a>
+                <a href={"/Resume.pdf"} style={{ color: "#2b3538" }}>
+                  Resume
+                </a>
               </Col>
               <Col span={8}>
                 <a href={"https://github.com/robert14k"}>
@@ -130,7 +132,11 @@ export default class InfoContainer extends Component<
                 </a>
               </Col>
               <Col span={8}>
-                <a href={"https://www.linkedin.com/in/robert-kirkpatrick-79282916a/"}>
+                <a
+                  href={
+                    "https://www.linkedin.com/in/robert-kirkpatrick-79282916a/"
+                  }
+                >
                   <Icon
                     style={{
                       height: "20px",
