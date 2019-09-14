@@ -61,6 +61,7 @@ export class LandingRoutes extends Component<
         <Route path ="/" exact component={LandingPage} />
         <Route path="/Robert" component={HomeLayout} />
         {/* <Route path="/Ted" component={null} />
+        // for now this will just direct to mine and then /ted will be his
         <Route path="/Spotify" component={null}/> */}
         {/* <div style={this.sectionStyle}>
           <Link to="/Robert">
