@@ -9,6 +9,8 @@ import reactDjango from "../images/react_django.png";
 import pitivi from "../images/pitivi.png";
 import ProjectEntity from "../Modals/ProjectEntity";
 import Project from "./Project";
+
+
 export interface IInfoContainerProps {
   mobile: boolean;
 }
@@ -23,7 +25,7 @@ let project1 = new ProjectEntity({
   description:
     "This is my first website created using react and typescript. I decided to create this as a way to learn how to build, deploy, and host a website.",
   link: "https://github.com/robert14k/RobertWebPage",
-  isLeft: false,
+  isLeft: false
 });
 let project2 = new ProjectEntity({
   picture: project156,
@@ -31,7 +33,7 @@ let project2 = new ProjectEntity({
   description:
     "This is a backend application written in Java and SQL to track invoices for a movie theater.",
   link: "https://github.com/robert14k/156Project5.1",
-  isLeft: true,
+  isLeft: true
 });
 let project3 = new ProjectEntity({
   picture: reactDjango,
@@ -39,7 +41,7 @@ let project3 = new ProjectEntity({
   description:
     "This is a blog website that I am currently working on. I am creating it to strengthen my web api skills and learn to use django, python, react, and redux.",
   link: "https://github.com/robert14k/BlogSite",
-  isLeft: false,
+  isLeft: false
 });
 let project4 = new ProjectEntity({
   picture: pitivi,
@@ -47,7 +49,7 @@ let project4 = new ProjectEntity({
   description:
     "Pitivi is an open source video editor for Linux. My software class is contributing to Pitivi while learning software development techniques through sprint planning, status meetings, and handoff presentations.",
   link: "https://gitlab.gnome.org/bracciata/pitivi/-/tree/solid_color_clips",
-  isLeft: true,
+  isLeft: true
 });
 projects[0] = project3;
 projects[2] = project1;
@@ -75,7 +77,7 @@ export default class InfoContainer extends Component<
             style={{
               height: "auto",
               backgroundColor: "#ECECEC",
-              borderColor: "#ECECEC",
+              borderColor: "#ECECEC"
             }}
           >
             <Row style={{ height: "64px" }} />
@@ -88,7 +90,7 @@ export default class InfoContainer extends Component<
                   height: "20px",
                   width: "20px",
                   color: "#2b3538",
-                  margin: "5px",
+                  margin: "5px"
                 }}
                 type="user"
               />
@@ -136,7 +138,7 @@ export default class InfoContainer extends Component<
                       height: "20px",
                       width: "20px",
                       color: "#2b3538",
-                      margin: "5px",
+                      margin: "5px"
                     }}
                     type="github"
                   />
@@ -153,7 +155,7 @@ export default class InfoContainer extends Component<
                       height: "20px",
                       width: "20px",
                       color: "#2b3538",
-                      margin: "5px",
+                      margin: "5px"
                     }}
                     type="linkedin"
                   />
@@ -163,14 +165,29 @@ export default class InfoContainer extends Component<
           </Card>
           <Row className="footerFont">
             Created By: Robert Kirkpatrick
-            <form action="https://postmail.invotes.com/send"
-            method="post" id="email_form">
-            <input type="text" name="subject" placeholder="Subject" />
-            <textarea name="text" placeholder="Message"></textarea>
-            <input type="hidden" name="access_token" value="zf3jsnz01o6sg9xx9uavh6pa" />
-            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
-            <input id="submit_form" type="submit" value="Send" />
+            <form
+              action="https://postmail.invotes.com/send"
+              method="post"
+              id="email_form"
+            >
+              <input type="text" name="subject" placeholder="Subject" />
+              <textarea name="text" placeholder="Message"></textarea>
+              <input
+                type="hidden"
+                name="access_token"
+                value="zf3jsnz01o6sg9xx9uavh6pa"
+              />
+              <input
+                type="hidden"
+                name="success_url"
+                value=".?message=Email+Successfully+Sent%21&isError=0"
+              />
+              <input
+                type="hidden"
+                name="error_url"
+                value=".?message=Email+could+not+be+sent.&isError=1"
+              />
+              <input id="submit_form" type="submit" value="Send" />
             </form>
           </Row>
           <Row className="footerFont">Created By: Robert Kirkpatrick ©</Row>

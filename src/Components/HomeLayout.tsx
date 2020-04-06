@@ -3,11 +3,10 @@ import React, { Component } from "react";
 import "../Style.css";
 import Background from "../images/mountain-names.jpg";
 //import Lake from '../images/mountainLake.jpg';
-import { Row, Col } from "antd";
+import { Row, Col, Affix, Tooltip, Icon } from "antd";
 import InfoContainer from "./InfoContainer";
-import animateScrollTo from 'animated-scroll-to';
+import animateScrollTo from "animated-scroll-to";
 //import { Grid, Row, Col } from 'react-flexbox-grid';
-
 
 export interface IHomeLayoutProps {
   //none
@@ -85,13 +84,32 @@ export class HomeLayout extends Component<IHomeLayoutProps, IHomeLayoutState> {
               <Col span={16}>
                 {/* this is where i want to render my info page, maybe make that a component */}
                 <h3 ref="about">
-                  <InfoContainer mobile={this.state.mobile}/>
+                  <InfoContainer mobile={this.state.mobile} />
                 </h3>
               </Col>
               <Col span={4} />
             </>
           )}
           {this.state.mobile && <InfoContainer mobile={this.state.mobile} />}
+          <Affix
+            offsetBottom={10}
+            style={{
+              position: "absolute",
+              left: 1
+            }}
+          >
+            <Tooltip title="Leave a message!">
+              <Icon
+                style={{
+                  fontSize: "20px",
+                  color: "#2b3538",
+                  margin: "20px"
+                }}
+                type="mail"
+                theme="outlined"
+              />
+            </Tooltip>
+          </Affix>
         </Row>
       </div>
     );
