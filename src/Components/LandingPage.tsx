@@ -30,26 +30,26 @@ export class LandingPage extends Component<
     overflow: "scroll" //this makes it able to scroll the innder component but the backgroudn remains fixed!!!
   };
 
-  // updateDimensions() {
-  //   if (window.innerWidth < 900) {
-  //     this.setState({
-  //       mobile: true
-  //     });
-  //   } else {
-  //     this.setState({
-  //       mobile: false
-  //     });
-  //   }
-  // }
+  updateDimensions() {
+    if (window.innerWidth < 900) {
+      this.setState({
+        mobile: true
+      });
+    } else {
+      this.setState({
+        mobile: false
+      });
+    }
+  }
 
-  // componentDidMount() {
-  //   this.updateDimensions();
-  //   window.addEventListener("resize", this.updateDimensions.bind(this));
-  // }
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener("resize", this.updateDimensions.bind(this));
-  // }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions.bind(this));
+  }
 
   mobile: boolean = false;
   render() {
