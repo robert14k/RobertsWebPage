@@ -95,25 +95,40 @@ export default class InfoContainer extends Component<
               About Me:
             </Row>
             <Row>
-              I’m a Junior at UNL studying software engineering with minors in
-              business and mathematics. During the school year, I work as a
-              Learning Assistant for the computer science II class at UNL. Being
-              a LA is helping me better my understanding of the java programming
-              language and strengthening my ability to communicate and teach
-              complicated CS principles. This past summer I had an amazing
-              opportunity to be a software development intern at Buildertrend.
-              <p></p>Outside of school, I am a brother of Phi Kappa Theta
+              I am a senior at UNL studying software engineering with minors in
+              business and mathematics. This past summer, I had an opportunity
+              to be a software development intern at Hudl in Lincoln. I worked
+              with a talented team of full-time engineers on their payment and 
+              subscription management related micro-services. I was able to use
+              the knowledge I had gained in class about scrum and agile, and 
+              apply it to my work at Hudl. Over the course of the two summers 
+              prior, I interned at Buildertrend and Northrop Grumman. This school 
+              year I am excited to be an associate member of the Raikes School
+              Design Studio Program.
+              <p/> 
+              Outside of school, I am a brother of Phi Kappa Theta
               Fraternity, an active member of the Newman Center on campus, and
-              an avid Husker football fan. I am excited by new technologies and
-              want to learn about the different disciplines of software and
-              hardware engineering. With my spare time, I play and listen to
-              music, and I am working on building a full-stack web app with a
-              react.js front-end and a python and django back-end.
+              an avid Husker football fan. This summer I married my highschool
+              sweetheart and am excited to explore the world with her. Speaking
+              of exploring the world, I love to travel; I spent this past Christmas
+              break in India and can now check the Taj Mahal off my list!  With my 
+              spare time, I play and listen to music, read books while sipping 
+              coffee, and I am working on building a full-stack web app with a
+              React.js and Apollo front-end and a Python and GraphQL back-end.
             </Row>
             <Row
               className="bodyHeaderFont"
               style={{ height: "40px", textAlign: "left" }}
             >
+              <Icon
+                style={{
+                  height: "20px",
+                  width: "20px",
+                  color: "#2b3538",
+                  margin: "5px",
+                }}
+                type="folder"
+              />
               Projects:
             </Row>
             <Row>
