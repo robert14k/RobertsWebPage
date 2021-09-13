@@ -5,8 +5,9 @@ import { Row, Card, Avatar, Icon, Col, Divider } from "antd";
 import "../Style.css";
 import webPage from "../images/webPage.png";
 import project156 from "../images/project156.png";
-import reactDjango from "../images/react_django.png";
+import heyday from "../images/Heyday.png";
 import pitivi from "../images/pitivi.png";
+import herdhand from "../images/Herdhand.png";
 import ProjectEntity from "../Modals/ProjectEntity";
 import Project from "./Project";
 export interface IInfoContainerProps {
@@ -23,7 +24,7 @@ let project1 = new ProjectEntity({
   description:
     "This is my first website created using react and typescript. I decided to create this as a way to learn how to build, deploy, and host a website.",
   link: "https://github.com/robert14k/RobertWebPage",
-  isLeft: false,
+  isLeft: true,
 });
 let project2 = new ProjectEntity({
   picture: project156,
@@ -31,15 +32,15 @@ let project2 = new ProjectEntity({
   description:
     "This is a backend application written in Java and SQL to track invoices for a movie theater.",
   link: "https://github.com/robert14k/156Project5.1",
-  isLeft: true,
+  isLeft: false,
 });
 let project3 = new ProjectEntity({
-  picture: reactDjango,
-  title: "Blog",
+  picture: heyday,
+  title: "Heyday",
   description:
-    "This is a blog website that I am currently working on. I am creating it to strengthen my web api skills and learn to use django, python, react, and redux.",
-  link: "https://github.com/robert14k/BlogSite",
-  isLeft: false,
+    "Heyday was a student lead startup out of Raikes Design Studio program that was geared as a financial management app for college students.",
+  link: "https://heyday.money",
+  isLeft: true,
 });
 let project4 = new ProjectEntity({
   picture: pitivi,
@@ -47,12 +48,21 @@ let project4 = new ProjectEntity({
   description:
     "Pitivi is an open source video editor for Linux. My software class is contributing to Pitivi while learning software development techniques through sprint planning, status meetings, and handoff presentations.",
   link: "https://gitlab.gnome.org/bracciata/pitivi/-/tree/solid_color_clips",
-  isLeft: true,
+  isLeft: false,
 });
-projects[0] = project3;
-projects[2] = project1;
-projects[3] = project2;
-projects[1] = project4;
+let project5 = new ProjectEntity({
+  picture: herdhand,
+  title: "Herdhand",
+  description:
+    "Herdhand is a cross-platform app, which I co-founded, that deals with herd management for cow-calf ranch operations. It is written using cutting edge technologies such as Flutter and Firebase.",
+  link: "https://app.herdhand.com",
+  isLeft: false,
+});
+projects[0] = project5;
+projects[1] = project3;
+projects[3] = project1;
+projects[4] = project2;
+projects[2] = project4;
 
 export default class InfoContainer extends Component<
   IInfoContainerProps,
@@ -96,25 +106,22 @@ export default class InfoContainer extends Component<
             </Row>
             <Row>
               I am a senior at UNL studying software engineering with minors in
-              business and mathematics. This past summer, I had an opportunity
-              to be a software development intern at Hudl in Lincoln. I worked
-              with a talented team of full-time engineers on their payment and 
-              subscription management related micro-services. I was able to use
-              the knowledge I had gained in class about scrum and agile, and 
-              apply it to my work at Hudl. Over the course of the two summers 
-              prior, I interned at Buildertrend and Northrop Grumman. This school 
-              year I am excited to be an associate member of the Raikes School
-              Design Studio Program.
-              <p/> 
-              Outside of school, I am a brother of Phi Kappa Theta
-              Fraternity, an active member of the Newman Center on campus, and
-              an avid Husker football fan. This summer I married my highschool
-              sweetheart and am excited to explore the world with her. Speaking
-              of exploring the world, I love to travel; I spent this past Christmas
-              break in India and can now check the Taj Mahal off my list!  With my 
-              spare time, I play and listen to music, read books while sipping 
-              coffee, and I am working on building a full-stack web app with a
-              React.js and Apollo front-end and a Python and GraphQL back-end.
+              business and mathematics. I am currently a software development
+              intern at Nelnet in Lincoln. I work with a talented team of
+              full-time engineers on an internal service for student loan
+              consolidation. Through the work at Nelnet, I am able to learn the
+              value of creating efficient solutions for large data sets. Over
+              the course of the three summers prior, I interned at Hudl,
+              Buildertrend, and Northrop Grumman. This school year I am excited
+              to be the development manager of the Nebraska Department of
+              Transportation’s project for the Raikes School Design Studio
+              Program.
+              <p />
+              In my free time I am currently working on building a cattle
+              management software called Herdhand. Herdhand is being created
+              using the latest technologies to have a simplified interface and
+              strong offline capabilities. Aside from side projects, I enjoy
+              spending time outdoors with my wife Maggie and our dog Mosley.
             </Row>
             <Row
               className="bodyHeaderFont"
